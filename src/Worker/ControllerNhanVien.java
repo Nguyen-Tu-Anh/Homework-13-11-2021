@@ -30,7 +30,8 @@ public class ControllerNhanVien {
             return kySu;
         }
     }
-// 1. Them nhan vien
+
+    // 1. Them nhan vien
     public static void addNhanVien(NhanVien nhanVien) {
         NhanVien[] newArrNV = new NhanVien[listNV.length + 1];
         for (int i = 0; i < listNV.length; i++) {
@@ -50,7 +51,6 @@ public class ControllerNhanVien {
                 return listNV[i];
             }
         }
-
         return null;
     }
 
@@ -75,6 +75,7 @@ public class ControllerNhanVien {
         listNV = newListNV;
         return newListNV;
     }
+
     // 4. Sửa theo tên
     public static NhanVien[] editNhanvien() {
         System.out.println("Nhập tên muốn sửa: ");
@@ -107,22 +108,23 @@ public class ControllerNhanVien {
         if (isKySu) {
             for (NhanVien nv : listNV) {
                 if (nv instanceof KySu) {
-                    System.out.println(nv.toString());
+                    System.out.println(nv);
                 }
             }
         } else {
             for (NhanVien nv : listNV) {
                 if (!(nv instanceof KySu)) {
-                    System.out.println(nv.toString());
+                    System.out.println(nv);
                 }
             }
         }
     }
-// 5. Hien thi 2
+
+    // 5. Hien thi 2
     public static void showAllNhanVien() {
         for (NhanVien nv : listNV) {
             if (nv instanceof KySu) {
-                System.out.println(nv.toString());
+                System.out.println(nv);
             }
         }
         for (NhanVien nv : listNV) {
@@ -131,6 +133,7 @@ public class ControllerNhanVien {
             }
         }
     }
+
     //6 sortByName
     public static NhanVien[] sortByName() {
         NhanVien temp;
@@ -145,6 +148,4 @@ public class ControllerNhanVien {
         }
         return listNV;
     }
-
-
 }
